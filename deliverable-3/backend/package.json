@@ -1,0 +1,33 @@
+{
+  "name": "team-project-8-breeze-parking-technologies",
+  "version": "1.0.0",
+  "description": "A Parking App",
+  "main": "server.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/csc301-winter-2020/team-project-8-breeze-parking-technologies.git"
+  },
+  "author": "Abhi_Kapoor; Jun_Wei_Wong, Shahzil_Lakhani, Sultan_Sidhu, Vidya_Ananda, Nizar_Islah, Jarryullah_Ahmad",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/csc301-winter-2020/team-project-8-breeze-parking-technologies/issues"
+  },
+  "homepage": "https://github.com/csc301-winter-2020/team-project-8-breeze-parking-technologies#readme",
+  "dependencies": {
+    "bcrypt": "^4.0.1",
+    "body-parser": "^1.19.0",
+    "chai": "^4.2.0",
+    "chai-http": "^4.3.0",
+    "cookie-parser": "^1.4.4",
+    "express": "^4.17.1",
+    "fs": "0.0.1-security",
+    "path": "^0.12.7",
+    "pg": "^7.18.2"
+  }
+}

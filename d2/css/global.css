@@ -1,0 +1,25 @@
+
+body {
+	background-image: url("/images/background.jpg");
+	background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.mainText {
+	text-align: center;
+	right: 50%;
+	color: white;
+	font-size: 100px; 
+
+}
+
+.form-container {
+	position: absolute;
+	top: 15vh;
+	background: #fff;
+	padding: 30px; 
+	border-radius: 10px;
+	box-shadow: 0px 0px 10px 0px black;
+}

@@ -1,0 +1,24 @@
+#content{
+  margin-left: 280px;
+}
+
+.wrapper {
+    display: flex;
+    width: 100%;
+}
+
+.settings-title{
+  text-align: center; 
+  font-size: 20px; 
+  color: black;
+}
+
+#pageHeader {
+  margin-top: 100px;
+  margin-bottom: 20px;
+}
+.logout-btn:hover{
+  border-bottom: 1pt black;
+  cursor: pointer;
+  transition: all 0.5s;
+}

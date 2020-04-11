@@ -1,0 +1,47 @@
+#content{
+  margin-left: 0px;
+}
+
+.wrapper {
+    display: flex;
+    width: 100%;
+}
+
+.apprReq{
+  width: 250px;
+  border-radius: 5px;
+}
+
+#submitBanReq{
+  border-radius: 5px;
+  background-color: grey;
+  transition: all 0.5s;
+}
+
+#submitBanReq:hover{
+  background-color: #00e699;
+  transition: all 0.5s;
+}
+
+#sidebar {
+    width: 250px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    z-index: 999;
+    background-image: url("../images/carSideMenu.png");
+	 background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed; 
+}
+#pageHeader {
+  margin-top: 100px;
+  margin-bottom: 20px;
+}
+.logout-btn:hover{
+  border-bottom: 1pt black;
+  cursor: pointer;
+  transition: all 0.5s;
+}

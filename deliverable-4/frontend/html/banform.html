@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Breeze - User Settings</title>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="../css/settings.css">
+		<link href="https://fonts.googleapis.com/css?family=Odibee+Sans&display=swap" rel="stylesheet"><meta charset="utf-8"/>
+
+	</head>
+	<body onload="reachedBanForm()">
+	<!-- Navigation -->
+		<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+		  <div class="container">
+		    <a class="navbar-brand" href="#">Breeze Parking Technologies</a>
+		    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+		    <span class="navbar-toggler-icon"></span>
+		        </button>
+		    <div class="collapse navbar-collapse" id="navbarResponsive">
+		      <ul class="navbar-nav ml-auto">
+		        <li class="nav-item active">
+		          <a class="nav-link" href="./">Home
+		                <span class="sr-only">(current)</span>
+		              </a>
+		        </li>
+		        <li class="nav-item">
+		          <a class="nav-link" href="../html/signup_common_user.html">Sign Up as User</a>
+		        </li>
+		        <li class="nav-item">
+		          <a class="nav-link" href="../html/signup_common_plm.html">Sign Up as PLM</a>
+		        </li>
+		        <li class="nav-item">
+		          <a class="nav-link" href="../html/meet_the_team.html">Meet the Team</a>
+		        </li>
+		      </ul>
+		    </div>
+		  </div>
+		</nav>
+		<br>
+		<br>
+		<br>
+
+		<h3 class="settings-title"> Account Settings </h3>
+        <p class="center"> Want to ban a driver from your parking lot? Submit a request and our team will review it ASAP! </p>
+
+
+        <div class="container mt-5">
+            <div class="row">
+                <div class="col-lg-4 pb-5">
+                    <!-- Account Sidebar-->
+                    <div class="author-card pb-3">
+                        <div class="author-card-cover" style="background-image: url(https://demo.createx.studio/createx-html/img/widgets/author/cover.jpg);"><a class="btn btn-style-1 btn-white btn-sm" href="#" data-toggle="tooltip" title="" data-original-title="You currently have 290 Reward points to spend"><i class="fa fa-award text-md"></i>&nbsp;290 points</a></div>
+                        <div class="author-card-profile">
+                            <div class="author-card-avatar"><img src="../images/team/zhengyangchen.jpg" alt="Daniel Adams">
+                            </div>
+                            <div class="author-card-details">
+                                <h5 class="author-card-name text-lg">Your Name Here</h5>
+                                <span class="author-card-position">Joined March 22, 2020</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="wizard">
+                        <nav class="list-group list-group-flush">
+                            <a class="list-group-item" onclick="redirectSettingsPage()">
+                                <i class="fe-icon-user text-muted"></i> Personal Details 
+                            </a>
+
+                            <a class="list-group-item" onclick="redirectUserPLMsettings()">
+                                <i class="fe-icon-map-pin text-muted"></i> Account Settings
+                            </a>
+                
+                             <a class="list-group-item button active" onclick="toBanForm()">
+                                Submit Ban Request
+                            </a>
+
+                        </nav>
+                    </div>
+                </div>
+
+                <!-- Profile Settings-->
+                <div class="col-lg-8 pb-5">
+                    <form class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="account-fn">E-mail Address</label>
+                                <input class="form-control" type="text" id="ban-email" value="" required="">
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="account-ln">Phone Number </label>
+                                <input class="form-control" type="text" id="ban-phone" value="" required="">
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="account-ln"> Title </label>
+                                <p>Enter a title for your ban request</p>
+                                <input class="form-control" type="text" id="ban-title" value="" required="">
+                            </div>
+                        </div>
+
+
+                        <div class="col-md-6">
+                            <label for="description"> Description </label>
+                            <p> Please explain why you'd like to ban this driver </p>
+                            <textarea rows="4" cols="35" id="ban-description">
+                            </textarea>
+                        </div>
+                        
+                      
+                        <div class="col-12">
+                            <hr class="mt-2 mb-3">
+                            <div class="d-flex flex-wrap justify-content-between align-items-center">
+                                <button class="btn btn-style-1 btn-primary" onclick="submitBanRequest()" type="button" data-toast="" data-toast-position="topRight" data-toast-type="success" data-toast-icon="fe-icon-check-circle" data-toast-title="Success!" data-toast-message="Your profile updated successfuly.">Submit Ban Request</button>
+                            </div>
+
+                        </div>
+
+                        <div class="col-12">
+                            <hr class="mt-2 mb-3">
+                            <div class="d-flex flex-wrap justify-content-between align-items-center">
+                                <button class="btn btn-style-1 btn-primary" onclick="viewSubmittedBanRequests()" type="button" data-toast="" data-toast-position="topRight" data-toast-type="success" data-toast-icon="fe-icon-check-circle" data-toast-title="Success!" data-toast-message="Your profile updated successfuly.">View Submitted Ban Requests</button>
+                            </div>
+                        </div>
+
+                    </form>
+
+
+                <table class="table" hidden="true">
+                  <thead>
+                    <tr>
+                      <th class ="space" scope="col">Title  </th>
+                      <th scope="col">Account #    </th>
+                      <th scope="col">    Status</th>
+                      <th scope="col">   Date Submitted</th>
+                    </tr>
+                  </thead>
+
+                  <tbody>
+
+                   <!--  <tr>
+                      <td>Mark</td>
+                      <td>100317</td>
+                      <td>Otto</td>
+                      <td>@mdo</td>
+                    </tr>
+
+                    <tr>
+
+                      <td>Jacob</td>
+                      <td>100317</td>
+                      <td>Thornton</td>
+                      <td>@fat</td>
+                    </tr> -->
+
+                  </tbody>
+
+                </table>
+
+
+                </div>
+            </div>
+        </div>
+
+
+
+	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+	<script src="../js/main.js"></script>
+
+	</body>
+</html>

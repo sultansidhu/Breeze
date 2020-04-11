@@ -1,0 +1,40 @@
+
+body {
+	background-image: url("../images/background.jpg");
+	background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+
+.mainText {
+	text-align: center;
+	top: 40%;
+	right: 45%;
+	color: white;
+	font-size: 50px; 
+	font-family: 'Odibee Sans', 'Arial';
+}
+
+.subText {
+	text-align: center;
+	top: 40%;
+	right: 45%;
+	color: white;
+	font-size: 30px; 
+	font-family: 'Odibee Sans', 'Arial';
+}
+
+.button_signup {
+	color: white;
+}
+
+.form-container {
+	position: absolute;
+	top: 8vh;
+	background: rgb(255,255,255, 0.4); 
+	padding: 30px; 
+	border-radius: 10px;
+	box-shadow: 0px 0px 10px 0px black;
+}

@@ -1,0 +1,55 @@
+
+body {
+	background-image: linear-gradient(#02aab0, #00cdac);
+	background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+h1{
+	padding-bottom: 5px;
+}
+h{
+	padding-bottom: 5px;
+}
+
+.btn-primary {
+	background-color: #0DCA78;
+    border-color: #01beae;
+}
+
+.mainText {
+	text-align: center;
+	top: 40%;
+	right: 45%;
+	color: white;
+	font-size: 50px; 
+	font-family: 'Odibee Sans', 'Arial';
+}
+
+.subText {
+	text-align: center;
+	top: 40%;
+	right: 45%;
+	color: white;
+	font-size: 30px; 
+	font-family: 'Odibee Sans', 'Arial';
+}
+
+.button_signup {
+	color: white;
+}
+
+.form-container {
+	background-color: white;
+    box-shadow: 0px 0px 0px 0px #76c5bb;
+	position: absolute;
+	top: 15vh;
+	padding: 30px; 
+	border-radius: 10px;
+}
+#errormessage {
+	padding: 1px;
+	color:red;
+	background-color:#FBD9DF;
+}

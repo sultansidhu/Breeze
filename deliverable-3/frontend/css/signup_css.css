@@ -1,0 +1,20 @@
+.carousel-item {
+  height: 65vh;
+  min-height: 350px;
+  background: no-repeat center center scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.white {
+	font-size: 15;
+	color: #D3D3D3;
+}
+
+.black {
+	font-size: 15;
+	color: black;
+}
+

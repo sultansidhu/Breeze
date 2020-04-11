@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Breeze - Welcome</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/sidebar.css">
+    <link rel="stylesheet" href="../css/dashboard_user.css">
+    <link href="https://fonts.googleapis.com/css?family=Odibee+Sans&display=swap" rel="stylesheet">
+    <meta charset="utf-8"/>
+    <!-- Scrollbar Custom CSS -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">
+    <script type="text/javascript" src="../js/main.js"></script>
+
+</head>
+<body onload="generateUserStats()">
+<!--    <div style="background-image: url('../images/stats.jpg');">-->
+
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" onload="replaceNavbarItems()">
+        <div class="container">
+            <a class="navbar-brand" href="#">Breeze Parking Technologies</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+                    aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                    <a class="nav-link" href="../html/dashboard_user.html">Transaction History</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../html/settings.html">Settings</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link logout-btn" onclick="logout()">Log Out</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Page Content -->
+    <div id="content">
+        <div class="container-fluid" id="main">
+            <br/><br/><br/><br/>
+            <h1> Summary Statistics</h1>
+
+            <div class="card-deck mb-3 text-center">
+            <div class="card mb-4 shadow-sm">
+              <div class="card-header">
+                <h4 class="my-0 font-weight-normal">Total Spending</h4>
+              </div>
+              <div class="card-body">
+                <h1 class="card-title pricing-card-title" id="totalSpend"> </h1>
+                <img src="../images/stats.jpg" class="card-img-top" alt="...">
+                <ul class="list-unstyled mt-3 mb-4">
+                </ul>
+              </div>
+            </div>
+            <div class="card mb-4 shadow-sm">
+              <div class="card-header">
+                <h4 class="my-0 font-weight-normal">Average Parking Fee</h4>
+              </div>
+              <div class="card-body">
+                <h1 class="card-title pricing-card-title" id="avgSpend"> </h1>
+                <img src="../images/parkingsign.jpg" class="card-img-top" alt="...">
+                <ul class="list-unstyled mt-3 mb-4">
+                </ul>
+              </div>
+            </div>
+            <div class="card mb-4 shadow-sm">
+              <div class="card-header">
+                <h4 class="my-0 font-weight-normal">Lots Visited</h4>
+              </div>
+              <div class="card-body">
+                <h1 class="card-title pricing-card-title" id="lotsVisited"> </h1>
+                <img src="../images/car-3.jpg" class="card-img-top" alt="...">
+                <ul class="list-unstyled mt-3 mb-4">
+                </ul>
+              </div>
+            </div>
+                <div class="card-deck mb-3 text-center">
+                <div class="card mb-4 shadow-sm">
+              <div class="card-header">
+                <h4 class="my-0 font-weight-normal" >Number of Transactions</h4>
+              </div>
+              <div class="card-body">
+                <h1 class="card-title pricing-card-title" id="numTransactions"> </h1>
+                <img src="../images/parking.jpg" class="card-img-top" alt="...">
+                <ul class="list-unstyled mt-3 mb-4">
+                </ul>
+              </div>
+            </div>
+                <div class="card mb-4 shadow-sm">
+              <div class="card-header">
+                <h4 class="my-0 font-weight-normal">Average Time Parked</h4>
+              </div>
+              <div class="card-body">
+                <h1 class="card-title pricing-card-title" id="timeParked"> </h1>
+                <img src="../images/carSideMenu.png" class="card-img-top" alt="...">
+                <ul class="list-unstyled mt-3 mb-4">
+                </ul>
+              </div>
+            </div>
+                <div class="card mb-4 shadow-sm">
+              <div class="card-header">
+                <h4 class="my-0 font-weight-normal">Longest Time Parked</h4>
+              </div>
+              <div class="card-body">
+                <h1 class="card-title pricing-card-title" id="longestTimeParked"> </h1>
+                <img src="../images/car-1.jpg" class="card-img-top" alt="...">
+                <ul class="list-unstyled mt-3 mb-4">
+                </ul>
+              </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+    </div>
+
+</body>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+<script src="../js/sidebar.js"></script>
+<!-- Popper.JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"
+        integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ"
+        crossorigin="anonymous"></script>
+
+<!-- jQuery Custom Scroller CDN -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
+
+
+</body>
+</html>

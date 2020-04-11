@@ -1,0 +1,40 @@
+.carousel-item {
+  height: 65vh;
+  min-height: 350px;
+  background: no-repeat center center scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.benefits-container {
+  background-image: url("../images/grayBack.jpg");
+  background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.benefits-title {
+  text-align: center;
+}
+
+.left-benefit {
+  text-align: left;
+}
+
+.right-benefit {
+  text-align: right;
+}
+
+.white {
+	font-size: 15;
+	color: #D3D3D3;
+}
+
+.black {
+	font-size: 15;
+	color: black;
+}
+
